@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:overScrollMode="never"
+    android:background="#FFF"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
+    tools:context=".view.activities.NoteAddSticker">
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/mDrawerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.haoduyoudu.DailyAccounts.view.customView.sticker.StickerScrollView
+                android:id="@+id/mScrollView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:id="@+id/images"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                    </LinearLayout>
+                    <com.haoduyoudu.DailyAccounts.view.customView.sticker.StickerLayout
+                        android:id="@+id/mStickerLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:visibility="visible" />
+                </FrameLayout>
+
+            </com.haoduyoudu.DailyAccounts.view.customView.sticker.StickerScrollView>
+
+            <ImageView
+                android:id="@+id/showright"
+                android:layout_width="20dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|center_vertical"
+                android:src="@drawable/ic_pop_right" />
+
+            <LinearLayout
+                android:id="@+id/sk_popview"
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:layout_gravity="bottom"
+                android:orientation="vertical"
+                android:visibility="gone">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="75dp"
+                    android:orientation="vertical"
+                    android:background="@drawable/shape_corner_up">
+                    <LinearLayout
+                        android:layout_marginTop="2dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="22.5dp">
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="2dp">
+
+                            <ImageView
+                                android:layout_width="26dp"
+                                android:layout_height="26dp"
+                                android:src="@drawable/ic_sticker_size"
+                                android:padding="2dp"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="大小"
+                                android:layout_marginStart="1dp"
+                                android:paddingTop="3dp"
+                                android:textSize="13sp"
+                                android:textColor="#9E000000"
+                                android:gravity="center" />
+                        </LinearLayout>
+                        <SeekBar
+                            android:id="@+id/sk_size"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:max="270"
+                            android:progress="150"
+                            android:paddingTop="3dp"
+                            android:duplicateParentState="true"
+                            android:progressTint="#FFA726"
+                            android:thumbTint="#D1D1D1"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="22.5dp">
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="2dp">
+                            <ImageView
+                                android:layout_width="26dp"
+                                android:layout_height="26dp"
+                                android:src="@drawable/ic_sticker_rotate"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="角度"
+                                android:textSize="13sp"
+                                android:textColor="#9E000000"
+                                android:gravity="center"
+                                android:layout_marginTop="3dp"
+                                android:layout_marginStart="1dp"/>
+                        </LinearLayout>
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="22.5dp"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginEnd="5dp"
+                            android:layout_marginBottom="1.8dp">
+                            <LinearLayout
+                                android:id="@+id/sk_angle_left"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="start"
+                                android:layout_marginStart="1.5dp">
+                                <ImageView
+                                    android:layout_width="22dp"
+                                    android:layout_height="22dp"
+                                    android:src="@drawable/ic_angle_left"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:text="左"
+                                    android:textSize="15sp"
+                                    android:textColor="#9E000000"
+                                    android:gravity="center" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/sk_angle_right"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="end"
+                                android:layout_marginEnd="7dp">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:text="右"
+                                    android:textSize="15sp"
+                                    android:textColor="#9E000000"
+                                    android:gravity="center" />
+
+                                <ImageView
+                                    android:layout_width="22dp"
+                                    android:layout_height="22dp"
+                                    android:src="@drawable/ic_angle_right"/>
+                            </LinearLayout>
+
+                        </FrameLayout>
+                    </LinearLayout>
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="25dp"
+                        android:background="@drawable/shape_sticker_del"
+                        android:id="@+id/delsk"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginStart="2dp"
+                        android:layout_marginEnd="2dp">
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center">
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:src="@drawable/ic_sticker_del"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="删除"
+                                android:layout_marginStart="5dp"
+                                android:textColor="#FFF"
+                                android:gravity="center" />
+                        </LinearLayout>
+                    </FrameLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </FrameLayout>
+        <FrameLayout
+            android:layout_width="55dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="end"
+            android:clickable="true"
+            android:focusable="true">
+            <ImageView
+                android:id="@+id/popbk"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"/>
+            <ImageView
+                android:id="@+id/backtoedit"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="top"
+                android:scaleType="centerInside"
+                android:layout_marginTop="2dp"
+                android:layout_marginStart="2dp"
+                android:src="@drawable/ic_sticker_back" />
+            <ImageView
+                android:id="@+id/editsk"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_sticker_add" />
+            <ImageView
+                android:id="@+id/ok"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="bottom"
+                android:layout_marginTop="2dp"
+                android:layout_marginStart="2dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_sticker_ok" />
+        </FrameLayout>
+    </androidx.drawerlayout.widget.DrawerLayout>
+
+</LinearLayout>

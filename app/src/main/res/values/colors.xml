@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="TC_1">#868181</color>
+    <color name="TC_2">#005ff9</color>
+    <color name="TC_3">#2c2c5d</color>
+    <color name="TC_4">#3a5729</color>
+    <color name="TC_5">#c2c5a1</color>
+    <color name="TC_6">#c6dbf0</color>
+    <color name="TC_7">#9C27B0</color>
+    <color name="TC_8">#B5DC1D69</color>
+    <color name="TC_9">#ffd146</color>
+    <color name="TC_10">#801816</color>
+    <color name="TC_11">#8BC34A</color>
+    <color name="TC_12">#ffffff</color>
+
+    <color name="dialog_background">#4D000000</color>
+</resources>

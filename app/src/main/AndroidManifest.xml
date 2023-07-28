@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-feature android:name="android.hardware.type.watch" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <application
+        android:name=".BaseApplication"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:extractNativeLibs="true"
+        android:fullBackupContent="@xml/backup_rules"
+        android:fullBackupOnly="true"
+        android:hardwareAccelerated="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".view.activities.GuideActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.activities.CongratulationsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.activities.FreeMakeNote"
+            android:exported="false" />
+        <activity
+            android:name=".view.activities.AboutSoftware"
+            android:exported="false" />
+        <activity
+            android:name=".view.activities.ShowFindResult"
+            android:exported="false" />
+        <activity
+            android:name=".view.activities.SearchNote"
+            android:exported="false" />
+        <activity
+            android:name=".view.activities.BackgroundChooser"
+            android:exported="false" />
+        <activity
+            android:name=".view.activities.MoodCalendar"
+            android:exported="false" />
+        <activity
+            android:name=".view.activities.NoteOption"
+            android:exported="false" />
+        <activity
+            android:name=".view.activities.NoteStickerChooser"
+            android:exported="false" />
+        <activity
+            android:name=".view.activities.NoteAddSticker"
+            android:exported="false" />
+        <activity
+            android:name=".view.activities.DeleteSafeCheck"
+            android:exported="false" />
+        <activity
+            android:name=".view.activities.NoteChangeTemplate"
+            android:exported="false" />
+        <activity
+            android:name=".view.activities.NoteChangeMood"
+            android:exported="false" />
+        <activity
+            android:name=".view.activities.NoteEditBody"
+            android:exported="false" />
+        <activity
+            android:name=".view.activities.NoteRecording"
+            android:exported="false" />
+        <activity
+            android:name=".view.activities.NoteAddMedia"
+            android:exported="false" />
+        <activity
+            android:name=".view.activities.PlayRecord"
+            android:exported="false" />
+        <activity
+            android:name=".view.activities.ViewImage"
+            android:exported="false" />
+        <activity
+            android:name=".view.activities.NoteViewer"
+            android:configChanges="orientation|keyboardHidden"
+            android:exported="false"
+            android:launchMode="singleTask"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity
+            android:name=".view.activities.MainActivity"
+            android:exported="true"
+            android:theme="@style/AppTheme.StartingWindowTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:id="@+id/scrollview"
+    android:scrollbars="none"
+    tools:context=".view.activities.NoteChangeMood">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:orientation="vertical"
+            android:id="@+id/topView">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginBottom="5dp"
+                android:checked="true"
+                android:text="请选择你的心情"
+                android:textColor="#FF9800"
+                android:textSize="16sp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/bottomView"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginBottom="5dp"
+                android:checked="true"
+                android:text="自定义心情"
+                android:textColor="#FF9800"
+                android:textSize="16sp" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/moodImage"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="6dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.321" />
+
+                <EditText
+                    android:id="@+id/moodText"
+                    android:layout_width="100dp"
+                    android:layout_height="29dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginStart="6dp"
+                    android:background="@drawable/shape_white_frame"
+                    android:hint="心情文本"
+                    android:textColorHint="#8AFFFFFF"
+                    android:textSize="13sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.31"
+                    app:layout_constraintStart_toEndOf="@+id/moodImage"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.32999998" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent">
+
+                    <TextView
+                        android:id="@+id/cancel"
+                        android:layout_width="79dp"
+                        android:layout_height="40dp"
+                        android:layout_marginRight="1dp"
+                        android:background="@drawable/bottom_button_left_style"
+                        android:gravity="center"
+                        android:text="关闭"
+                        android:textColor="@drawable/text_color_selector" />
+
+                    <TextView
+                        android:id="@+id/complete"
+                        android:layout_width="79dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="1dp"
+                        android:background="@drawable/bottom_button_right_style"
+                        android:gravity="center"
+                        android:text="完成"
+                        android:textColor="@drawable/text_color_selector" />
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/bottom_and_bottom_view"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="6dp"
+                android:checked="true"
+                android:text="选择创建方式"
+                android:textColor="#FF9800"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/old_way"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="50dp"
+                android:background="@drawable/shape_5dp_corners_grey"
+                android:padding="3dp"
+                android:src="@drawable/ic_create_note_old_way"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/new_way"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/shape_5dp_corners_grey"
+                android:padding="3dp"
+                android:src="@drawable/ic_create_note_new_way"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="传统方式"
+                android:gravity="center_horizontal"
+                android:textColor="#FFF"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="@+id/old_way"
+                app:layout_constraintStart_toStartOf="@+id/old_way"
+                app:layout_constraintTop_toBottomOf="@+id/old_way" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="新方式\n（实验性）"
+                android:gravity="center_horizontal"
+                android:textColor="#FFF"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="@+id/new_way"
+                app:layout_constraintStart_toStartOf="@+id/new_way"
+                app:layout_constraintTop_toBottomOf="@+id/new_way" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+</ScrollView>

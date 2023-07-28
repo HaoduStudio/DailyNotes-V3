@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.activities.NoteViewer">
+
+    <FrameLayout
+        android:id="@+id/viewForShot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/templateBackground"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#74000000"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true">
+                    <TextView
+                        android:id="@+id/date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="end|center_vertical"
+                        android:text="1980-1-1"
+                        android:textColor="#FF9800"
+                        android:textSize="15dp"
+                        android:fontFamily="@font/date_font"/>
+
+                    <TextView
+                        android:id="@+id/dayOfWeek"
+                        android:layout_width="35dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_marginStart="3dp"
+                        android:text="Sun"
+                        android:textColor="#FF9800"
+                        android:textSize="15dp" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:id="@+id/moodImage"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_marginStart="22dp"
+                        android:src="@drawable/no_mood" />
+
+                    <TextView
+                        android:id="@+id/moodText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:text="美化"
+                        android:textColor="#949191"
+                        android:layout_gravity="center_vertical"
+                        android:textSize="11dp" />
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/editMood"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:padding="3dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="22dp"
+                    android:src="@drawable/ic_viewer_edit" />
+
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/tmpLine1"
+                android:layout_height="3dp"
+                android:layout_width="match_parent"
+                android:layout_marginTop="6dp"
+                android:layout_marginBottom="4dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20.5dp"
+                android:layerType="software"
+                android:background="@drawable/shape_line_dash"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="3dp"
+                android:layout_marginEnd="22dp"
+                android:layout_marginStart="22dp"
+                android:layout_marginBottom="3dp"
+                android:descendantFocusability="blocksDescendants"
+                android:id="@+id/bodyBackground">
+
+                <EditText
+                    android:id="@+id/bodyText"
+                    android:layout_width="115dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:background="@null"
+                    android:hint="       在此处输入"
+                    android:enabled="false"
+                    android:textColor="#868181"
+                    android:textColorHint="#EEDBD5D5"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:id="@+id/editBodyText"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:padding="3dp"
+                    android:layout_gravity="end|center_vertical"
+                    android:layout_marginTop="3dp"
+                    android:src="@drawable/ic_viewer_edit" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/tmpLine2"
+                android:layout_height="3dp"
+                android:layout_width="match_parent"
+                android:layout_marginTop="6dp"
+                android:layout_marginBottom="4dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20.5dp"
+                android:layerType="software"
+                android:background="@drawable/shape_line_dash"/>
+
+            <LinearLayout
+                android:layout_marginTop="7dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <!--            <TextView-->
+                <!--                android:id="@+id/edit_addmedia1"-->
+                <!--                android:layout_width="match_parent"-->
+                <!--                android:layout_height="wrap_content"-->
+                <!--                android:textColor="#EEDBD5D5"-->
+                <!--                android:textSize="14sp"-->
+                <!--                android:layout_marginStart="22dp"-->
+                <!--                android:layout_marginEnd="22dp"-->
+                <!--                android:text="Click to Add Multimedia"/>-->
+                <LinearLayout
+                    android:id="@+id/mediaBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:padding="2dp"
+                        android:src="@drawable/ic_show_ac_from_btn"
+                        android:background="@drawable/shape_5dp_corners"/>
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:padding="1dp"
+                        android:layout_marginStart="5dp"
+                        android:src="@drawable/ic_show_ac_little_video"
+                        android:background="@drawable/shape_5dp_corners"/>
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:padding="3dp"
+                        android:layout_marginStart="5dp"
+                        android:src="@drawable/ic_show_ac_record"
+                        android:background="@drawable/shape_5dp_corners"/>
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:padding="2dp"
+                        android:layout_marginStart="5dp"
+                        android:src="@drawable/ic_show_ac_takephoto"
+                        android:background="@drawable/shape_5dp_corners"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/imageList"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="22dp"
+                            android:layout_marginEnd="22dp"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/recordList"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="22dp"
+                            android:layout_marginEnd="22dp" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/addMedia"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:padding="3dp"
+                    android:layout_marginEnd="22dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_gravity="end"
+                    android:src="@drawable/ic_viewer_edit" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/complete"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:paddingStart="7dp"
+                android:paddingEnd="7dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="7dp"
+                android:layout_marginBottom="6dp"
+                android:background="@drawable/green_stroke_start_button"
+                android:text="完成"
+                android:gravity="center"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                android:textColor="#4CAF50"/>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/editTemplate"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:padding="3dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="6dp"
+            android:layout_gravity="end|top"
+            android:src="@drawable/ic_viewer_edit" />
+
+        <com.haoduyoudu.DailyAccounts.view.customView.sticker.StickerLayout
+            android:id="@+id/stickerLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </FrameLayout>
+
+</ScrollView>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="30dp"
+    android:layout_height="30dp"
+    android:id="@+id/background">
+
+    <TextView
+        android:id="@+id/bigDate"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="1"
+        android:textSize="22sp"
+        android:gravity="center"/>
+
+    <ImageView
+        android:id="@+id/moodImage"
+        android:layout_width="30dp"
+        android:layout_height="30dp" />
+
+    <TextView
+        android:id="@+id/maskText"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:text="1"
+        android:textColor="#FFF"
+        android:background="@drawable/bg_bottom_right_circle"
+        android:textSize="9sp"
+        android:paddingEnd="1dp"
+        android:gravity="bottom|end"
+        android:layout_gravity="right|bottom" />
+</FrameLayout>

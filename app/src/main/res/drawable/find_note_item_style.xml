@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 点击的效果 -->
+    <item android:state_selected="true">
+        <shape android:shape="rectangle">
+            <!-- 填充颜色 -->
+            <solid android:color="#4D2A2B2C" />
+            <corners android:radius="9dp" />
+        </shape>
+    </item>
+    <!-- 点击的效果 -->
+    <item android:state_pressed="true">
+        <shape android:shape="rectangle">
+            <solid android:color="#4D2A2B2C" />
+            <corners android:radius="9dp" />
+        </shape>
+    </item>
+    <!-- 这是未点击的效果 -->
+    <item android:state_pressed="false">
+        <shape android:shape="rectangle">
+            <solid android:color="#4D2A2B2C" />
+            <corners android:radius="9dp" />
+        </shape>
+    </item>
+
+</selector>

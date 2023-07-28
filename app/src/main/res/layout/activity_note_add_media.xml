@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.activities.NoteAddMedia">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/takePhoto"
+            android:background="@drawable/shape_5dp_corners"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:padding="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="12dp"
+            android:src="@drawable/ic_show_ac_takephoto"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <ImageView
+            android:id="@+id/fromAlbum"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:padding="15dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/shape_5dp_corners"
+            android:src="@drawable/ic_show_ac_from_btn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <ImageView
+            android:id="@+id/takeVideo"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:padding="10dp"
+            android:background="@drawable/shape_5dp_corners"
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="20dp"
+            android:src="@drawable/ic_show_ac_little_video"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <ImageView
+            android:id="@+id/makeRecord"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:padding="15dp"
+            android:layout_gravity="center"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/shape_5dp_corners"
+            android:src="@drawable/ic_show_ac_record"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:text="拍照"
+            android:textColor="#595959"
+            android:textSize="12dp"
+            app:layout_constraintEnd_toEndOf="@+id/takePhoto"
+            app:layout_constraintStart_toStartOf="@+id/takePhoto"
+            app:layout_constraintTop_toBottomOf="@+id/takePhoto" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:text="相册"
+            android:textColor="#595959"
+            android:textSize="12dp"
+            app:layout_constraintEnd_toEndOf="@+id/fromAlbum"
+            app:layout_constraintStart_toStartOf="@+id/fromAlbum"
+            app:layout_constraintTop_toBottomOf="@+id/fromAlbum" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:text="视频"
+            android:textColor="#595959"
+            android:textSize="12dp"
+            app:layout_constraintEnd_toEndOf="@+id/takeVideo"
+            app:layout_constraintStart_toStartOf="@+id/takeVideo"
+            app:layout_constraintTop_toBottomOf="@+id/takeVideo" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:text="录音"
+            android:textColor="#595959"
+            android:textSize="12dp"
+            app:layout_constraintEnd_toEndOf="@+id/makeRecord"
+            app:layout_constraintStart_toStartOf="@+id/makeRecord"
+            app:layout_constraintTop_toBottomOf="@+id/makeRecord" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ECE5D1"
+        android:visibility="invisible"
+        android:id="@+id/lodingView">
+        <ImageView
+            android:id="@+id/progressBar"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:src="@drawable/ic_cute_loading"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/loadText"
+            android:layout_width="90dp"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:textSize="13sp"
+            android:text="请稍后......"
+            android:textColor="#E9DF8781"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/progressBar" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

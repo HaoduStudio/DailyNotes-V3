@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="40dp"
+    android:layout_height="40dp"
+    android:background="#00FFFFFF"
+    app:cardBackgroundColor="#00FFFFFF"
+    app:cardCornerRadius="9dp"
+    app:cardElevation="0dp">
+
+    <View
+        android:id="@+id/moreMoodBackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#C3FFFFFF"
+        android:visibility="gone"/>
+
+    <ImageView
+        android:id="@+id/moodImage"
+        android:layout_width="40dp"
+        android:layout_height="40dp" />
+
+</androidx.cardview.widget.CardView>

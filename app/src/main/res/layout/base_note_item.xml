@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:orientation="horizontal"
+    android:layout_marginBottom="5dp"
+    android:background="@drawable/base_note_item_style">
+
+    <LinearLayout
+        android:layout_width="110dp"
+        android:layout_height="57dp"
+        android:layout_marginStart="5dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/note_date_text"
+            android:layout_width="110dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="5dp"
+            android:text="2021-07-26"
+            android:textColor="@drawable/text_color_selector"
+            android:textSize="16sp"
+            android:gravity="center_vertical"
+            android:fontFamily="@font/date_font"/>
+
+        <TextView
+            android:id="@+id/day_of_week_text"
+            android:layout_width="110dp"
+            android:layout_height="15dp"
+            android:layout_marginTop="2.5dp"
+            android:text="Wed"
+            android:textColor="@drawable/text_color_selector"
+            android:textSize="13sp"
+            android:fontFamily="@font/day_of_week_font"/>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/mood_img"
+        android:layout_gravity="center_vertical"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_marginEnd="5dp"
+        android:src="@drawable/no_mood"/>
+</LinearLayout>

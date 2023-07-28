@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000"
+    tools:context=".view.activities.SearchNote">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="查找手帐"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="6dp"
+            android:textColor="#FF9800"
+            android:textSize="16dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="输入关键字(用空格分隔)"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="5dp"
+            android:textSize="14sp"
+            android:textColor="#FFB74D"
+            android:layout_gravity="center_horizontal"/>
+
+        <EditText
+            android:id="@+id/edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/shape_white_frame"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="10dp"
+            android:textSize="15sp"
+            android:gravity="start"
+            android:hint="在此处输入"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true">
+
+        <TextView
+            android:id="@+id/cancel"
+            android:layout_width="79dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="1dp"
+            android:background="@drawable/bottom_button_left_style"
+            android:gravity="center"
+            android:text="关闭"
+            android:textColor="@drawable/text_color_selector" />
+
+        <TextView
+            android:id="@+id/complete"
+            android:layout_width="79dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="1dp"
+            android:background="@drawable/bottom_button_right_style"
+            android:gravity="center"
+            android:text="完成"
+            android:textColor="@drawable/text_color_selector" />
+    </LinearLayout>
+</RelativeLayout>

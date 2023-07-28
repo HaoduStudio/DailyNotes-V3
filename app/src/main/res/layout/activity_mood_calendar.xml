@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:overScrollMode="never"
+    tools:context=".view.activities.MoodCalendar">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/leftButton"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/ic_cal_left"
+                android:layout_gravity="start"
+                android:layout_marginStart="10dp"/>
+
+            <TextView
+                android:id="@+id/mouth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:text="Jun"
+                android:textSize="16sp"
+                android:layout_gravity="center_horizontal" />
+
+            <Button
+                android:id="@+id/rightButton"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/ic_cal_right"
+                android:layout_gravity="end"
+                android:layout_marginEnd="10dp"/>
+        </FrameLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/calendar"
+            android:layout_width="150dp"
+            android:layout_height="210dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp" />
+    </LinearLayout>
+</ScrollView>

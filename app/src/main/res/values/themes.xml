@@ -1,0 +1,37 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#00FFFFFF</item>
+        <item name="colorPrimaryDark">#00FFFFFF</item>
+        <item name="colorAccent">#FFFF9800</item>
+        <item name="android:largeHeap">true</item>
+    </style>
+
+    <!-- 应用启动页(StartingWindow)的theme -->
+    <style name="AppTheme.StartingWindowTheme" parent="AppTheme">
+        <!-- 可以设置成纯颜色（设置一个和Activity UI相似的背景） -->
+        <!--<item name="android:windowBackground">@color/startingwindow_bgcolor</item>-->
+        <!--也可以设置成一张图片 -->
+        <item name="android:windowBackground">@drawable/bg_app_starting</item>
+        <item name="android:hardwareAccelerated">false</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+    
+    <style name="NoRightSlideTheme" parent="AppTheme">
+        <item name="android:windowSwipeToDismiss">false</item>
+    </style>
+
+    <style name="DialogActivityTheme" parent="AppTheme">
+        <item name="android:windowSwipeToDismiss">false</item>
+        <item name="android:windowAnimationStyle">@null</item>
+    </style>
+
+    <style name="DialogActivityTheme2" parent="AppTheme">
+        <item name="android:windowAnimationStyle">@null</item>
+    </style>
+
+</resources>

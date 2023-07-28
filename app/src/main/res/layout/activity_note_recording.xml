@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dialog_background"
+    tools:context=".view.activities.NoteRecording">
+
+    <LinearLayout
+        android:layout_width="122dp"
+        android:layout_height="135dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/shape_5dp_corners"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tittle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:text="准备就绪"
+            android:textColor="#1C1C1C" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp">
+            <ImageView
+                android:id="@+id/playGif"
+                android:layout_width="34dp"
+                android:layout_height="34dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_playing_sound" />
+
+            <com.github.rahatarmanahmed.cpv.CircularProgressView
+                android:id="@+id/timeLift"
+                android:layout_width="wrap_content"
+                android:layout_height="70dp"
+                android:layout_gravity="center"
+                app:cpv_color="#4CAF50"
+                app:cpv_progress="100"
+                app:cpv_thickness="3dp"/>
+        </FrameLayout>
+
+
+
+        <TextView
+            android:id="@+id/startOrStopRecord"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:paddingStart="7dp"
+            android:paddingEnd="7dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="7dp"
+            android:background="@drawable/green_stroke_start_button"
+            android:text="开始录音"
+            android:gravity="center"
+            android:enabled="false"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            android:textColor="#4CAF50"/>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/close"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="10dp"
+        android:src="@drawable/ic_sticker_view_delete" />
+
+</RelativeLayout>
