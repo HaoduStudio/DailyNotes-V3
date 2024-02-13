@@ -36,7 +36,7 @@ class BaseApplication : Application() {
         lateinit var BACKGROUND_DOWNLOAD_FROM_URI_PATH: String
         const val APP_SHARED_PREFERENCES_NAME = "AppConfig"
         const val WEATHER_REFRESH_TIME = 1000*60*60
-        const val BASE_SERVER_URI = "https://dailynotes-content.nextsay.cn"
+        const val BASE_SERVER_URI = "example" //已停止服务
 
         val weatherToPath = mapOf<String, String>(
             "xue" to ASSETS_WEATHER_BACKGROUND_PATH + "bg_snow.webp", //雪
